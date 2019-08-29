@@ -44,10 +44,34 @@ namespace SchoolLibrary
             PhoneNumber = SchoolPhoneNumber;
         }
 
-        public float AverageThreeScores(float a, float b, float c)
+        //public float AverageThreeScores(float a, float b, float c)
+        //{
+        //    var result = (a + b + c) / 3;
+        //    return result;
+        //}
+
+
+        public static float AverageThreeScores(float a, float b, float c) => (a + b + c) / 3;
+
+        public static int AverageThreeScores(int a, int b, int c)
         {
+
             var result = (a + b + c) / 3;
-            return result
+            return result;
+        }
+
+        public override string ToString()
+        {
+            var sb = new StringBuilder();
+            sb.AppendLine(Name);
+            sb.AppendLine(Address);
+            sb.Append(City);
+            sb.Append(", ");
+            sb.Append(State);
+            sb.Append("  ");
+            sb.Append(Zip);
+
+            return sb.ToString();
         }
     }
 }
